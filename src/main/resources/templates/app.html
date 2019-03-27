@@ -40,6 +40,7 @@
 	<script type="text/javascript" th:inline="javascript">
 		function setShinyframeHeight() {
 			$('#shinyframe').css('height', ($(window).height())+'px');
+			$('#shinyframe').css('margin-top', (1)+'px');
 		}
 		window.addEventListener("load", setShinyframeHeight);
 		window.addEventListener("resize",  setShinyframeHeight);
