@@ -34,13 +34,12 @@
 <body>
 	<div th:replace="../fragments/navbar :: navbar"></div>
 	
-    <iframe id="shinyframe" th:src="${container}" width="100%" frameBorder="0"></iframe>
+    <iframe id="shinyframe" th:src="${container}" width="99%" frameBorder="0"></iframe>
     <div class="loading"><div class="loading-txt">Launching <span th:text="${appTitle}"></span>...</div></div>
     
 	<script type="text/javascript" th:inline="javascript">
 		function setShinyframeHeight() {
 			$('#shinyframe').css('height', ($(window).height())+'px');
-			$('#shinyframe').css('margin-top', (1)+'px');
 		}
 		window.addEventListener("load", setShinyframeHeight);
 		window.addEventListener("resize",  setShinyframeHeight);
